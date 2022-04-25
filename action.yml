@@ -3,20 +3,8 @@ description: 'Deploy a zip file to AWS Elastic Beanstalk'
 author: 'Einar Egilsson'
 runs:
   using: 'node12'
-  main: 'beanstalk-deploy.js'
+  main: 'dist/index.js'
 inputs:
-  aws_access_key:
-    description: 'AWS Access Key'
-    required: true
-  aws_secret_key:
-    description: 'AWS Secret Key'
-    required: true
-  aws_session_token:
-    description: 'AWS Session Token when using temporary security credentials such as when assuming a role in AWS through STS'
-    required: false  
-  region:
-    description: 'AWS Region'
-    required: true
   application_name:
     description: 'Beanstalk application name'
     required: true
