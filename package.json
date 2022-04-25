@@ -4,9 +4,12 @@
   "description": "GitHub Action + command line tool to deploy to AWS Elastic Beanstalk.",
   "main": "beanstalk-deploy.js",
   "scripts": {
+    "package": "ncc build index.js -o dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin" : { "beanstalk-deploy" : "./beanstalk-deploy.js"},
+  "bin": {
+    "beanstalk-deploy": "./beanstalk-deploy.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/einaregilsson/beanstalk-deploy.git"
@@ -23,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/einaregilsson/beanstalk-deploy/issues"
   },
-  "homepage": "https://github.com/einaregilsson/beanstalk-deploy#readme"
+  "homepage": "https://github.com/einaregilsson/beanstalk-deploy#readme",
+  "dependencies": {
+    "@vercel/ncc": "0.33.4",
+    "aws-sdk": "^2.1120.0"
+  }
 }
